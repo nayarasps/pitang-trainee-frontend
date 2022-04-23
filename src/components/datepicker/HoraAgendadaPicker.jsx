@@ -15,7 +15,7 @@ const HoraAgendadaPicker = () => {
             timeIntervals={60}
             dateFormat="HH:mm"
             minTime={setMinutes(now, 0)}
-            maxTime={setHours(setMinutes(now, 45), 23)}
+            maxTime={setHours(setMinutes(now,30), 23)}
         />
     );
 };

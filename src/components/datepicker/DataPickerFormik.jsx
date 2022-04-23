@@ -5,7 +5,6 @@ import ptBR from "date-fns/locale/pt-BR";
 
 import "react-datepicker/dist/react-datepicker.css";
 
-
 const DataPickerFormik = ({ ...props }) => {
     const { setFieldValue } = useFormikContext();
     const [field] = useField(props);
