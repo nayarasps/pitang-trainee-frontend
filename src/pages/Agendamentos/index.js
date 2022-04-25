@@ -20,6 +20,12 @@ const Agendamentos = (columns,
     }, [fetchData, endpoint, refetchTimestamp]);
 
 
+    const mudarStatus = (status, id) => {
+
+        let novoStatus = {status: !status}
+
+        axios.patch(/agendamentos/ + id, novoStatus).then(r => alert(r.data.mensagem));
+    }
 
         return (
             <>
@@ -42,6 +48,7 @@ const Agendamentos = (columns,
                                             <th>{valor.dataAgendada}</th>
                                             <th>{valor.horaAgendada}</th>
                                             <th>{valor.status? <Check/>: <X/>}</th>
+                                            <button onClick={() => mudarStatus(valor.status, valor.id)}>Mudar Status</button>
                                         </tr>
                                     )}
                                 </table>
