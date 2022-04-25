@@ -3,9 +3,9 @@ import axios from '../../services/api.js'
 import moment from "moment";
 import * as Yup from 'yup';
 
-import DataNascimentoPicker from "../../components/datepicker/DataNascimentoPicker";
-import DataAgendadaPicker from "../../components/datepicker/DataAgendadaPicker";
-import HoraAgendadaPicker from "../../components/datepicker/HoraAgendadaPicker";
+import DataNascimentoPicker from "../datepicker/DataNascimentoPicker";
+import DataAgendadaPicker from "../datepicker/DataAgendadaPicker";
+import HoraAgendadaPicker from "../datepicker/HoraAgendadaPicker";
 
 const formValidation = Yup.object().shape({
 
@@ -35,6 +35,7 @@ const inicialValoresForm = {
     dataAgendada: '',
     horaAgendada: '',
 }
+
 
 const handleSubmit = async (values, {resetForm}) => {
 

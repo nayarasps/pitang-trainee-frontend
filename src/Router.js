@@ -1,12 +1,16 @@
-import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 
-import PacienteForm from "./pages/Cadastro/PacienteForm";
+import Home from "./pages/Home";
+import Agendamentos from "./pages/Agendamentos";
+import Cadastro from "./pages/Castrastro";
 
 const Router = () => {
     return (
         <BrowserRouter>
             <Routes>
-                <Route path="/agendamentos" element={<PacienteForm />} />
+                <Route path="/" element={<Home />} />
+                <Route path="/cadastro" element={<Cadastro />} />
+                <Route path="/agendamentos" element={<Agendamentos />} />
             </Routes>
         </BrowserRouter>
     );
